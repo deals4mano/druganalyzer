@@ -16,32 +16,33 @@ AI Drug Analyzer is a Python-based application that uses OpenAI's API to analyze
 The project requires Python 3.8 or higher. Install the dependencies listed in the `requirements.txt` file:
 
 ```bash
-pip install -r [requirements.txt](http://_vscodecontentref_/0)
+pip install -r requirements.txt
+```
 
+### Key Dependencies
+OpenAI: For interacting with OpenAI's API.  
+Watchdog: For monitoring file system changes.  
 
-Key Dependencies
-OpenAI: For interacting with OpenAI's API.
-Watchdog: For monitoring file system changes.
-
-
+```
 .
-├── [main.py](http://_vscodecontentref_/1)               # Entry point for the application
-├── [druganalyzer.py](http://_vscodecontentref_/2)       # Handles file uploads and OpenAI API interactions
-├── [fileloader.py](http://_vscodecontentref_/3)         # Encodes files (e.g., PDFs) to Base64
-├── [tmp.py](http://_vscodecontentref_/4)                # Contains utility functions for JSON request creation
-├── [requirements.txt](http://_vscodecontentref_/5)      # List of dependencies
-├── README.md             # Project documentation
-├── monitored/            # Folder to monitor for new files
-├── extracted/            # Folder where extracted files are stored
-├── error/                # Folder for problematic files
-
+├── main.py                                              # Entry point for the application
+├── druganalyzer.py                                      # Handles file uploads and OpenAI API interactions
+├── fileloader.py                                        # Encodes files (e.g., PDFs) to Base64
+├── requirements.txt                                     # List of dependencies
+├── README.md                                            # Project documentation
+├── monitored/                                           # Folder to monitor for new files
+├── extracted/                                           # Folder where extracted files are stored
+├── error/                                               # Folder for problematic files
+```
 Usage
 Set Up OpenAI API Key:
 
 Add your OpenAI API key to the environment variable OPENAI_API_KEY or directly in the code (not recommended for production).
 Run the Application: Start the application by running the main.py file:
 
+```bash
 python main.py
+```
 
 Monitor Folder: Place files (e.g., PDFs, text files) in the monitored folder. The application will automatically process them.
 
@@ -53,7 +54,7 @@ The application detects the file, uploads it to OpenAI, and processes the respon
 The analysis report is saved as analysis_report.txt in the same folder.
 JSON Request Example
 The application dynamically generates JSON requests for OpenAI's API. Below is an example of a generated request:
-
+```
 {
     "role": "user",
     "content": [
@@ -68,7 +69,7 @@ The application dynamically generates JSON requests for OpenAI's API. Below is a
         }
     ]
 }
-
-Error Handling
+```
+Error Handling  
 Files that fail to upload or process are moved to the error folder for review.
 Detailed error logs are printed to the console for debugging

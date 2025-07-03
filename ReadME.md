@@ -44,15 +44,16 @@ Run the Application: Start the application by running the main.py file:
 python main.py
 ```
 
-Monitor Folder: Place files (e.g., PDFs, text files) in the monitored folder. The application will automatically process them.
+Monitor Folder: Place files (e.g., PDFs, text files) in the monitored folder. The application will automatically process them.  
 
-View Reports: Processed files will generate analysis reports saved in the corresponding folder.
+View Reports: Processed files will generate analysis reports saved in the corresponding folder.  
 
-Example Workflow
-Place a file (e.g., PatientChart.pdf) in the monitored folder.
-The application detects the file, uploads it to OpenAI, and processes the response.
-The analysis report is saved as analysis_report.txt in the same folder.
-JSON Request Example
+**Example Workflow**  
+Place a file (e.g., PatientChart.pdf) in the monitored folder.  
+The application detects the file, uploads it to OpenAI, and processes the response.  
+The analysis report is saved as analysis_report.txt in the same folder.    
+
+**JSON Request Example**  
 The application dynamically generates JSON requests for OpenAI's API. Below is an example of a generated request:
 ```
 {
@@ -70,6 +71,6 @@ The application dynamically generates JSON requests for OpenAI's API. Below is a
     ]
 }
 ```
-Error Handling  
+**Error Handling**  
 Files that fail to upload or process are moved to the error folder for review.
 Detailed error logs are printed to the console for debugging

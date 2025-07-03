@@ -1,0 +1,68 @@
+<NewRx xmlns="http://www.ncpdp.org/schema/SCRIPT">
+  <Header>
+    <To>
+      <Name>CVS Pharmacy</Name>
+      <Identification>
+        <Type>NCPDPID</Type>
+        <ID>1234567</ID>
+      </Identification>
+    </To>
+    <From>
+      <Name>Dr. John Smith</Name>
+      <Identification>
+        <Type>NPI</Type>
+        <ID>1234567890</ID>
+      </Identification>
+    </From>
+    <MessageID>ABC123456789</MessageID>
+    <SentTime>2025-06-26T10:20:00-04:00</SentTime>
+  </Header>
+
+  <Body>
+    <NewRx>
+      <Patient>
+        <Name>
+          <LastName>Doe</LastName>
+          <FirstName>Jane</FirstName>
+        </Name>
+        <Gender>F</Gender>
+        <DateOfBirth>1990-02-15</DateOfBirth>
+        <Address>
+          <StreetAddressLine>123 Main St</StreetAddressLine>
+          <City>Tampa</City>
+          <State>FL</State>
+          <ZipCode>33601</ZipCode>
+        </Address>
+      </Patient>
+
+      <Prescriber>
+        <Identification>
+          <Type>NPI</Type>
+          <ID>1234567890</ID>
+        </Identification>
+        <Name>
+          <LastName>Smith</LastName>
+          <FirstName>John</FirstName>
+        </Name>
+        <ContactNumbers>
+          <Phone>8135551234</Phone>
+          <Fax>8135555678</Fax>
+        </ContactNumbers>
+      </Prescriber>
+
+      <MedicationPrescribed>
+        <DrugDescription>Lisinopril 10 MG Tablet</DrugDescription>
+        <DrugCoded>
+          <ProductCode>00093015001</ProductCode> <!-- Example NDC -->
+          <ProductCodeQualifier>NDC</ProductCodeQualifier>
+        </DrugCoded>
+        <Quantity>30</Quantity>
+        <QuantityUnit>Tablet</QuantityUnit>
+        <Directions>Take one tablet by mouth once daily</Directions>
+        <Refills>2</Refills>
+        <WrittenDate>2025-06-26</WrittenDate>
+        <Substitutions>0</Substitutions> <!-- 0 = Dispense as Written -->
+      </MedicationPrescribed>
+    </NewRx>
+  </Body>
+</NewRx>

@@ -1,0 +1,26 @@
+
+{
+    "role": "user",
+    "content": [
+      {
+        "type": "input_text",
+        "text": "Attached files contain patient charts , lab results for multiple visits. Analyze the documents and provide a report in the following structure\\n\\n- analyze drug compatibility and highlight potential risks such as known allergies, disease contraindications, unfavorable lab values\\n- check for therapeutic duplication or potential ineffectiveness based on patient history\\n- highlight high risk profiles and alert risky drug classes based on patient history\\n- provide a summary that includes Key facts from patient history relevant to the prescription, Risk assessment, Monitoring recommendations (e.g., check blood sugar, LDL, HDL), Suggested drug alternatives (if relevant)"
+      },
+      {
+        "type": "input_file",
+        "filename": "MRN123456-LabResult.pdf",
+        "file_data": "data:application/pdf;base64,JV"
+      },
+      {
+        "type": "input_file",
+        "filename": "MRN123456-PatientChart1.pdf",
+        "file_data": "data:application/pdf;base64,JVB"
+      },
+      {
+        "type": "input_file",
+        "filename": "MRN123456-PatientChart2.pdf",
+        "file_data": "data:application/pdf;base64,JVBERi"
+      }
+    ]
+  }
+
